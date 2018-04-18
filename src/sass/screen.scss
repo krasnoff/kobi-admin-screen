@@ -4,8 +4,27 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 /*@import "compass/reset";*/
+@import "font-awesome/fontawesome";
+@import "font-awesome/fa-brands";
+@import "font-awesome/fa-regular";
+@import "font-awesome/fa-solid";
 
-body
+#wrapper
 {
-    color: black;
+    width: 100%;
+}
+
+.navbar-default
+{
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.navbar-static-top {
+    z-index: 1000;
+    border-width: 0 0 1px;
+
+    @media (min-width: 768px) {
+        border-radius: 0;
+    }
 }
