@@ -54,3 +54,30 @@
     padding-top: 18px;
     padding-bottom: 18px;
 }
+
+.admin-dropdown-user
+{
+    box-sizing: border-box;
+    
+
+    li {
+        padding-left: 0.5em !important;
+        font-size: 0.9em;
+        margin-top: 0.5em !important;
+        margin-bottom: 0.5em !important;
+
+        .dropdown-divider {
+            padding-left: 0em !important;
+        }
+        
+        a {
+            text-decoration: none;
+    
+            :hover {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    
+}
