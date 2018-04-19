@@ -15042,3 +15042,9 @@ a.text-dark:hover, a.text-dark:focus {
     border-radius: 0;
   }
 }
+
+/* line 36, ../sass/screen.scss */
+.admin-dropdown-toggle {
+  padding-right: 1.5em;
+  text-decoration: none;
+}
