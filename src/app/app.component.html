@@ -6,13 +6,57 @@
     </div>
 
     <ul class="nav navbar-top-links navbar-right">
-      <li class="dropdown">
-        <a class="dropdown-toggle admin-dropdown-toggle" data-toggle="dropdown" href="#" style="text-decoration: none;">
+      <li class="dropdown" ngbDropdown placement="bottom-right">
+        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-envelope" href="#" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-envelope fa-fw"></i>
         </a>
+        <ul class="dropdown-menu dropdown-messages" ngbDropdownMenu aria-labelledby="drp-envelope">
+          <li>
+              <a href="#">
+                  <div>
+                      <strong>John Smith</strong>
+                      <span class="pull-right text-muted">
+                          <em>Yesterday</em>
+                      </span>
+                  </div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+              </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+              <a href="#">
+                  <div>
+                      <strong>John Smith</strong>
+                      <span class="pull-right text-muted">
+                          <em>Yesterday</em>
+                      </span>
+                  </div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+              </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+              <a href="#">
+                  <div>
+                      <strong>John Smith</strong>
+                      <span class="pull-right text-muted">
+                          <em>Yesterday</em>
+                      </span>
+                  </div>
+                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+              </a>
+          </li>
+          <li class="divider"></li>
+          <li>
+              <a class="text-center" href="#">
+                  <strong>Read All Messages</strong>
+                  <i class="fa fa-angle-right"></i>
+              </a>
+          </li>
+        </ul>
       </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-user" data-toggle="dropdown" href="#" style="text-decoration: none;">
+      <li class="dropdown" ngbDropdown placement="bottom-right">
+        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-user" href="#" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-user fa-fw"></i>
         </a>
         <ul class="dropdown-menu dropdown-user" ngbDropdownMenu aria-labelledby="drp-user">

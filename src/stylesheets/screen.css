@@ -9158,7 +9158,7 @@ input[type="button"].btn-block {
   }
 }
 
-/* line 2, ../sass/bootstrap/_dropdown.scss */
+/* line 2, ../sass/bootstrap/dropdown.scss */
 .dropup,
 .dropright,
 .dropdown,
@@ -9184,7 +9184,7 @@ input[type="button"].btn-block {
   margin-left: 0;
 }
 
-/* line 15, ../sass/bootstrap/_dropdown.scss */
+/* line 15, ../sass/bootstrap/dropdown.scss */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -9205,13 +9205,13 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
 }
 
-/* line 36, ../sass/bootstrap/_dropdown.scss */
+/* line 36, ../sass/bootstrap/dropdown.scss */
 .dropdown-menu-right {
   right: 0;
   left: auto;
 }
 
-/* line 44, ../sass/bootstrap/_dropdown.scss */
+/* line 44, ../sass/bootstrap/dropdown.scss */
 .dropup .dropdown-menu {
   top: auto;
   bottom: 100%;
@@ -9236,7 +9236,7 @@ input[type="button"].btn-block {
   margin-left: 0;
 }
 
-/* line 57, ../sass/bootstrap/_dropdown.scss */
+/* line 57, ../sass/bootstrap/dropdown.scss */
 .dropright .dropdown-menu {
   top: 0;
   right: auto;
@@ -9261,12 +9261,12 @@ input[type="button"].btn-block {
 .dropright .dropdown-toggle:empty::after {
   margin-left: 0;
 }
-/* line 67, ../sass/bootstrap/_dropdown.scss */
+/* line 67, ../sass/bootstrap/dropdown.scss */
 .dropright .dropdown-toggle::after {
   vertical-align: 0;
 }
 
-/* line 74, ../sass/bootstrap/_dropdown.scss */
+/* line 74, ../sass/bootstrap/dropdown.scss */
 .dropleft .dropdown-menu {
   top: 0;
   right: 100%;
@@ -9303,18 +9303,18 @@ input[type="button"].btn-block {
 .dropleft .dropdown-toggle:empty::after {
   margin-left: 0;
 }
-/* line 84, ../sass/bootstrap/_dropdown.scss */
+/* line 84, ../sass/bootstrap/dropdown.scss */
 .dropleft .dropdown-toggle::before {
   vertical-align: 0;
 }
 
-/* line 93, ../sass/bootstrap/_dropdown.scss */
+/* line 93, ../sass/bootstrap/dropdown.scss */
 .dropdown-menu[x-placement^="top"], .dropdown-menu[x-placement^="right"], .dropdown-menu[x-placement^="bottom"], .dropdown-menu[x-placement^="left"] {
   right: auto;
   bottom: auto;
 }
 
-/* line 104, ../sass/bootstrap/_dropdown.scss */
+/* line 104, ../sass/bootstrap/dropdown.scss */
 .dropdown-divider {
   height: 0;
   margin: 0.5rem 0;
@@ -9322,7 +9322,7 @@ input[type="button"].btn-block {
   border-top: 1px solid #e9ecef;
 }
 
-/* line 111, ../sass/bootstrap/_dropdown.scss */
+/* line 111, ../sass/bootstrap/dropdown.scss */
 .dropdown-item {
   display: block;
   width: 100%;
@@ -9341,24 +9341,24 @@ input[type="button"].btn-block {
   text-decoration: none;
   background-color: #f8f9fa;
 }
-/* line 129, ../sass/bootstrap/_dropdown.scss */
+/* line 129, ../sass/bootstrap/dropdown.scss */
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
   background-color: #007bff;
 }
-/* line 136, ../sass/bootstrap/_dropdown.scss */
+/* line 136, ../sass/bootstrap/dropdown.scss */
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6c757d;
   background-color: transparent;
 }
 
-/* line 147, ../sass/bootstrap/_dropdown.scss */
+/* line 147, ../sass/bootstrap/dropdown.scss */
 .dropdown-menu.show {
   display: block;
 }
 
-/* line 152, ../sass/bootstrap/_dropdown.scss */
+/* line 152, ../sass/bootstrap/dropdown.scss */
 .dropdown-header {
   display: block;
   padding: 0.5rem 1.5rem;
@@ -9368,7 +9368,7 @@ input[type="button"].btn-block {
   white-space: nowrap;
 }
 
-/* line 162, ../sass/bootstrap/_dropdown.scss */
+/* line 162, ../sass/bootstrap/dropdown.scss */
 .dropdown-item-text {
   display: block;
   padding: 0.25rem 1.5rem;
@@ -15020,30 +15020,30 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #dee2e6 !important;
   }
 }
-/* line 16, ../sass/screen.scss */
+/* line 17, ../sass/screen.scss */
 #wrapper {
   width: 100%;
 }
 
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .navbar-default {
   background-color: #f8f8f8;
   border-bottom: 1px solid #e7e7e7;
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
-  /* line 27, ../sass/screen.scss */
+  /* line 28, ../sass/screen.scss */
   .navbar-static-top {
     border-radius: 0;
   }
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 .admin-dropdown-toggle {
   padding-right: 1.5em;
   text-decoration: none;
