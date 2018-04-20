@@ -15065,24 +15065,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* line 58, ../sass/screen.scss */
 .admin-dropdown-user {
-  box-sizing: border-box;
-}
-/* line 63, ../sass/screen.scss */
-.admin-dropdown-user li {
-  padding-left: 0.5em !important;
   font-size: 0.9em;
-  margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
 }
-/* line 69, ../sass/screen.scss */
-.admin-dropdown-user li .dropdown-divider {
-  padding-left: 0em !important;
-}
-/* line 73, ../sass/screen.scss */
-.admin-dropdown-user li a {
-  text-decoration: none;
-}
-/* line 76, ../sass/screen.scss */
-.admin-dropdown-user li a :hover {
-  text-decoration: none;
+
+/* line 63, ../sass/screen.scss */
+.mail-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 310px;
 }

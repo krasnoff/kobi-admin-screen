@@ -10,7 +10,7 @@
         <a class="dropdown-toggle admin-dropdown-toggle" id="drp-envelope" href="#" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-envelope fa-fw"></i>
         </a>
-        <ul class="dropdown-menu dropdown-messages" ngbDropdownMenu aria-labelledby="drp-envelope">
+        <!--ul class="dropdown-menu dropdown-messages" ngbDropdownMenu aria-labelledby="drp-envelope">
           <li>
               <a href="#">
                   <div>
@@ -53,21 +53,28 @@
                   <i class="fa fa-angle-right"></i>
               </a>
           </li>
-        </ul>
+        </ul-->
+        <div class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-envelope">
+            <div *ngFor="let code of codes">
+                <div class="dropdown-item">
+                    <div class="navbar-header">{{code.from}}</div>
+                    <div class="navbar-right">{{code.date}}</div>
+                    <div class="mail-text">{{code.text}}</div>
+                </div>
+                <div class="dropdown-divider"></div>
+            </div>
+        </div>
       </li>
       <li class="dropdown" ngbDropdown placement="bottom-right">
         <a class="dropdown-toggle admin-dropdown-toggle" id="drp-user" href="#" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-user fa-fw"></i>
         </a>
-        <ul class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-user">
-          <li><a href="#"><i class="fas fa-user"></i> User Profile</a>
-          </li>
-          <li><a href="#"><i class="fas fa-cog"></i> Settings</a>
-          </li>
-          <li class="dropdown-divider"></li>
-          <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
-          </li>
-        </ul>
+        <div class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-user">
+            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> User Profile</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
       </li>
     </ul>
   </nav>
