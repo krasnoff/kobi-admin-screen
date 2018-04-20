@@ -15069,9 +15069,29 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* line 63, ../sass/screen.scss */
-.mail-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 310px;
+.admin-dropdown-user-mail {
+  width: 290px;
+  font-size: 0.9em;
+}
+/* line 68, ../sass/screen.scss */
+.admin-dropdown-user-mail .mail-text {
+  white-space: normal;
+}
+/* line 73, ../sass/screen.scss */
+.admin-dropdown-user-mail .from {
+  font-weight: 700;
+  width: 49%;
+  float: left;
+}
+/* line 80, ../sass/screen.scss */
+.admin-dropdown-user-mail .date {
+  font-style: italic;
+  width: 49%;
+  float: right;
+  text-align: right;
+}
+/* line 88, ../sass/screen.scss */
+.admin-dropdown-user-mail .readAllItems {
+  font-weight: 700;
+  text-align: center;
 }

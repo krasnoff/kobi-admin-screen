@@ -60,10 +60,34 @@
     font-size: 0.9em;   
 }
 
-.mail-text
+.admin-dropdown-user-mail
 {
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 310px;
+    width: 290px;
+    font-size: 0.9em;   
+
+    .mail-text
+    {
+        white-space: normal;
+    }
+
+    .from
+    {
+        font-weight: 700;
+        width: 49%;
+        float: left;
+    }
+
+    .date
+    {
+        font-style: italic;
+        width: 49%;
+        float: right;
+        text-align: right;
+    }
+
+    .readAllItems
+    {
+        font-weight: 700;
+        text-align: center;
+    }
 }

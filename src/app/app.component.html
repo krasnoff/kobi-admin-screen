@@ -10,59 +10,16 @@
         <a class="dropdown-toggle admin-dropdown-toggle" id="drp-envelope" href="#" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-envelope fa-fw"></i>
         </a>
-        <!--ul class="dropdown-menu dropdown-messages" ngbDropdownMenu aria-labelledby="drp-envelope">
-          <li>
-              <a href="#">
-                  <div>
-                      <strong>John Smith</strong>
-                      <span class="pull-right text-muted">
-                          <em>Yesterday</em>
-                      </span>
-                  </div>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-              </a>
-          </li>
-          <li class="divider"></li>
-          <li>
-              <a href="#">
-                  <div>
-                      <strong>John Smith</strong>
-                      <span class="pull-right text-muted">
-                          <em>Yesterday</em>
-                      </span>
-                  </div>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-              </a>
-          </li>
-          <li class="divider"></li>
-          <li>
-              <a href="#">
-                  <div>
-                      <strong>John Smith</strong>
-                      <span class="pull-right text-muted">
-                          <em>Yesterday</em>
-                      </span>
-                  </div>
-                  <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
-              </a>
-          </li>
-          <li class="divider"></li>
-          <li>
-              <a class="text-center" href="#">
-                  <strong>Read All Messages</strong>
-                  <i class="fa fa-angle-right"></i>
-              </a>
-          </li>
-        </ul-->
-        <div class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-envelope">
-            <div *ngFor="let code of codes">
-                <div class="dropdown-item">
-                    <div class="navbar-header">{{code.from}}</div>
-                    <div class="navbar-right">{{code.date}}</div>
-                    <div class="mail-text">{{code.text}}</div>
+        <div class="dropdown-menu dropdown-user admin-dropdown-user-mail" ngbDropdownMenu aria-labelledby="drp-envelope">
+            <div *ngFor="let code of codes; let i=index">
+                <div class="dropdown-item" *ngIf="i<numOfMails">
+                    <div class="from">{{code.from}}</div>
+                    <div class="date">{{code.date}}</div>
+                    <div class="mail-text">{{truncate(code.text, 50)}}</div>
                 </div>
-                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider" *ngIf="i<numOfMails"></div>
             </div>
+            <div class="dropdown-item readAllItems">Read all Items</div>
         </div>
       </li>
       <li class="dropdown" ngbDropdown placement="bottom-right">
