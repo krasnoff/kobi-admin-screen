@@ -52,10 +52,17 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#" (click)="onSamplePageClicked($event, item)">
                             <i class="far fa-copy"></i>&nbsp;&nbsp;Sample Pages
-                            
                         </a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item sub-item" [ngClass]="{'active': samplePageClicked}">
+                                <a class="nav-link" href="#">Blank Page</a>
+                            </li>
+                            <li class="nav-item sub-item" [ngClass]="{'active': samplePageClicked}">
+                                <a class="nav-link" href="#">Login</a>
+                            </li>
+                        </ul>
                       </li>
                   </ul>
               </div>

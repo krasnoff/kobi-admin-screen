@@ -15100,10 +15100,20 @@ a.text-dark:hover, a.text-dark:focus {
 .sidebar {
   border-right: 1px solid #e7e7e7;
   width: 350px;
+  height: 100vh;
   padding-left: 0px;
   padding-right: 0px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .sidebar .nav-item {
   border-bottom: 1px solid #e7e7e7;
+}
+/* line 109, ../sass/screen.scss */
+.sidebar .sub-item {
+  padding-left: 23px;
+  display: none;
+}
+/* line 114, ../sass/screen.scss */
+.sidebar .active {
+  display: block;
 }

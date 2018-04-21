@@ -10,6 +10,7 @@ import {AppService} from './app.service';
 export class AppComponent {
   public codes: Array<any> = [];
   public numOfMails: number = 3;
+  public samplePageClicked: boolean = false;
 
   constructor(private _httpService:AppService) {}
 
@@ -22,6 +23,10 @@ export class AppComponent {
         });
       }
     );
+  }
+
+  onSamplePageClicked(event, item){
+    this.samplePageClicked = !this.samplePageClicked;
   }
 
   private truncate(str: string, numofChars: number) {

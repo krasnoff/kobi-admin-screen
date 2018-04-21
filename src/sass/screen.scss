@@ -97,11 +97,21 @@ $border: 1px solid #e7e7e7;
 .sidebar {
     border-right: $border;
     width: 350px;
+    height: 100vh;
     padding-left: 0px;
     padding-right: 0px;
 
     .nav-item
     {
         border-bottom: $border;
+    }
+
+    .sub-item {
+        padding-left: 23px;
+        display: none;
+    }
+
+    .active {
+        display: block;
     }
 }
