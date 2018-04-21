@@ -14,11 +14,13 @@
 @import "bootstrap/bootstrap";
 @import "bootstrap/dropdown";
 
+$border-color: #e7e7e7;
+$background-color: #f8f8f8;
+$border: 1px solid #e7e7e7;
+
 #wrapper
 {
     width: 100%;
-
-    
 }
 
 .navbar{
@@ -34,8 +36,8 @@
 
 .navbar-default
 {
-    background-color: #f8f8f8;
-    border-bottom: 1px solid #e7e7e7;
+    background-color: $background-color;
+    border-bottom: $border;
 }
 
 .navbar-static-top {
@@ -89,5 +91,17 @@
     {
         font-weight: 700;
         text-align: center;
+    }
+}
+
+.sidebar {
+    border-right: $border;
+    width: 350px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    .nav-item
+    {
+        border-bottom: $border;
     }
 }
