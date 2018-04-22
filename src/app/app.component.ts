@@ -11,6 +11,7 @@ export class AppComponent {
   public codes: Array<any> = [];
   public numOfMails: number = 3;
   public samplePageClicked: boolean = false;
+  public displaySideMenu: boolean = false;
 
   constructor(private _httpService:AppService) {}
 
@@ -27,6 +28,10 @@ export class AppComponent {
 
   onSamplePageClicked(event, item){
     this.samplePageClicked = !this.samplePageClicked;
+  }
+
+  onDisplayMenuClick(event, item){
+    this.displaySideMenu = !this.displaySideMenu;
   }
 
   private truncate(str: string, numofChars: number) {

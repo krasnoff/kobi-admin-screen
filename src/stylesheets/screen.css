@@ -15020,42 +15020,42 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #dee2e6 !important;
   }
 }
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 #wrapper {
   width: 100%;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .navbar-header {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 .navbar-default {
   background-color: #f8f8f8;
   border-bottom: 1px solid #e7e7e7;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
-  /* line 43, ../sass/screen.scss */
+  /* line 44, ../sass/screen.scss */
   .navbar-static-top {
     border-radius: 0;
   }
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .admin-dropdown-toggle {
   padding-left: 1.5em;
   text-decoration: none;
@@ -15063,40 +15063,40 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 18px;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .admin-dropdown-user {
   font-size: 0.9em;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .admin-dropdown-user-mail {
   width: 290px;
   font-size: 0.9em;
 }
-/* line 70, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .admin-dropdown-user-mail .mail-text {
   white-space: normal;
 }
-/* line 75, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .admin-dropdown-user-mail .from {
   font-weight: 700;
   width: 49%;
   float: left;
 }
-/* line 82, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .admin-dropdown-user-mail .date {
   font-style: italic;
   width: 49%;
   float: right;
   text-align: right;
 }
-/* line 90, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .admin-dropdown-user-mail .readAllItems {
   font-weight: 700;
   text-align: center;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .sidebar {
   border-right: 1px solid #e7e7e7;
   width: 350px;
@@ -15104,16 +15104,40 @@ a.text-dark:hover, a.text-dark:focus {
   padding-left: 0px;
   padding-right: 0px;
 }
-/* line 104, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .sidebar .nav-item {
   border-bottom: 1px solid #e7e7e7;
 }
-/* line 109, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .sidebar .sub-item {
   padding-left: 23px;
   display: none;
 }
-/* line 114, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 .sidebar .active {
   display: block;
+}
+
+@media (max-width: 768px) {
+  /* line 120, ../sass/screen.scss */
+  .navbar-right {
+    width: 100%;
+  }
+  /* line 125, ../sass/screen.scss */
+  .navbar-right .dropdown-menu {
+    left: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 132, ../sass/screen.scss */
+  .navbar-toggle {
+    float: right;
+  }
+}
+@media (min-width: 768px) {
+  /* line 132, ../sass/screen.scss */
+  .navbar-toggle {
+    display: none;
+  }
 }

@@ -17,6 +17,7 @@
 $border-color: #e7e7e7;
 $background-color: #f8f8f8;
 $border: 1px solid #e7e7e7;
+$screen-width: 768px;
 
 #wrapper
 {
@@ -44,7 +45,7 @@ $border: 1px solid #e7e7e7;
     z-index: 1000;
     border-width: 0 0 1px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $screen-width) {
         border-radius: 0;
     }
 }
@@ -113,5 +114,28 @@ $border: 1px solid #e7e7e7;
 
     .active {
         display: block;
+    }
+}
+
+.navbar-right
+{
+    @media (max-width: $screen-width) {
+        width: 100%;
+
+        .dropdown-menu
+        {
+            left: 0px !important;
+        }
+    }
+}
+
+.navbar-toggle
+{
+    @media (max-width: $screen-width) {
+        float: right;
+    }
+
+    @media (min-width: $screen-width) {
+        display: none;
     }
 }
