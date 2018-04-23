@@ -40,7 +40,6 @@
   </nav>
   <div id="page-wrapper" class="container-fluid">
       <div class="row">
-          &nbsp;
           <nav class="col-md-2 d-md-block bg-light sidebar" [ngClass]="{'d-none': displaySideMenu}">
               <div class="sidebar-sticky">
                   <ul class="nav flex-column">
@@ -70,6 +69,8 @@
                   </ul>
               </div>
           </nav>
+
+          <router-outlet></router-outlet>
       </div>
     
   </div>

@@ -15141,3 +15141,9 @@ a.text-dark:hover, a.text-dark:focus {
     display: none;
   }
 }
+
+/* line 143, ../sass/screen.scss */
+.routerFrame {
+  width: calc(100% - 350px);
+  border: 1px solid black;
+}

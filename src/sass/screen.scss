@@ -139,3 +139,9 @@ $screen-width: 768px;
         display: none;
     }
 }
+
+.routerFrame
+{
+    width: calc(100% - 350px);
+    border: 1px solid black;
+}
