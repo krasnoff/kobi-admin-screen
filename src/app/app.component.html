@@ -10,7 +10,7 @@
 
     <ul class="nav navbar-top-links navbar-right" >
       <li class="dropdown" ngbDropdown placement="bottom-right">
-        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-envelope" href="#" style="text-decoration: none;" ngbDropdownToggle>
+        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-envelope" [routerLink]="['/dashboard']" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-envelope fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-user admin-dropdown-user-mail" ngbDropdownMenu aria-labelledby="drp-envelope">
@@ -26,14 +26,14 @@
         </div>
       </li>
       <li class="dropdown" ngbDropdown placement="bottom-right">
-        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-user" href="#" style="text-decoration: none;" ngbDropdownToggle>
+        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-user" [routerLink]="['/dashboard']" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-user fa-fw"></i>
         </a>
         <div class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-user">
-            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> User Profile</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Settings</a>
+            <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-user"></i> User Profile</a>
+            <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-cog"></i> Settings</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
       </li>
     </ul>
@@ -44,25 +44,25 @@
               <div class="sidebar-sticky">
                   <ul class="nav flex-column">
                       <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link"  [routerLink]="['/dashboard']">
                             <i class="fas fa-tachometer-alt"></i>&nbsp;&nbsp;Dashboard
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link"  [routerLink]="['/dashboard']">
                             <i class="fab fa-wpforms"></i>&nbsp;&nbsp;Forms
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#" (click)="onSamplePageClicked($event, item)">
+                        <a class="nav-link"  [routerLink]="['/dashboard']" (click)="onSamplePageClicked($event, item)">
                             <i class="far fa-copy"></i>&nbsp;&nbsp;Sample Pages
                         </a>
                         <ul class="nav flex-column">
                             <li class="nav-item sub-item" [ngClass]="{'active': samplePageClicked}">
-                                <a class="nav-link" href="#">Blank Page</a>
+                                <a class="nav-link"  [routerLink]="['/dashboard']">Blank Page</a>
                             </li>
                             <li class="nav-item sub-item" [ngClass]="{'active': samplePageClicked}">
-                                <a class="nav-link" href="#">Login</a>
+                                <a class="nav-link"  [routerLink]="['/dashboard']">Login</a>
                             </li>
                         </ul>
                       </li>

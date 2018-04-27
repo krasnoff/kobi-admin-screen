@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ChartsModule } from 'ng2-charts';
 
 
 import { AppComponent } from './app.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
     BrowserModule,
     NgbModule.forRoot(),
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

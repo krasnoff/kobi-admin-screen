@@ -115,6 +115,10 @@ $screen-width: 768px;
     .active {
         display: block;
     }
+
+    @media (max-width: $screen-width) {
+        height: auto;
+    }
 }
 
 .navbar-right
@@ -143,5 +147,35 @@ $screen-width: 768px;
 .routerFrame
 {
     width: calc(100% - 350px);
-    border: 1px solid black;
+    padding-right: 1.0em;
+    padding-left: 1.0em;
+
+    .myDashboard {
+        text-align: center;
+
+        .panel {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+            .panel-heading {
+                color: #333;
+                background-color: #f5f5f5;
+                padding: 10px 15px;
+                border-bottom: 1px solid #ddd;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                text-align: left;
+            }
+        }
+    }
+    
+    @media (max-width: $screen-width) {
+        width: 100%;
+        padding-right: 0em;
+        padding-left: 0em;
+    }
 }
