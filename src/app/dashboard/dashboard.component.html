@@ -23,7 +23,23 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-6">2</div>
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading"><i class="fas fa-chart-bar"></i>&nbsp;Bar Chart Example</div>
+      <div class="panel-body">
+        <div id="morris-bar-chart">
+          <canvas baseChart 
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="row myDashboard">
     <div class="col-sm-6">3</div>
