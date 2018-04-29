@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {BaseClassComponent} from '../base-class/base-class.component';
+import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,15 +9,25 @@ import {BaseClassComponent} from '../base-class/base-class.component';
   styleUrls: ['./dashboard.component.css'],
   host: {
     class:'routerFrame'
-  } 
+  },
+  providers: [AppService]
 })
 export class DashboardComponent extends BaseClassComponent implements OnInit {
+  public browsers: Array<any> = [];
 
-  constructor() { 
+  constructor(private _httpService:AppService) { 
     super();
   }
 
   ngOnInit() {
+    this._httpService.getMethod('/json/DataTable.json')
+    .subscribe (
+      data => {
+        data.forEach(element => {
+          this.browsers.push(element);
+        });
+      }
+    );
   }
 
   //#region line chart
