@@ -14,9 +14,16 @@ import {AppService} from '../app.service';
 })
 export class DashboardComponent extends BaseClassComponent implements OnInit {
   public browsers: Array<any> = [];
+  public browsersSlice: Array<any> = [];
+
+  private pageNum: number;
+  private pageSize: number;
 
   constructor(private _httpService:AppService) { 
     super();
+
+    this.pageNum = 1;
+    this.pageSize = 5;
   }
 
   ngOnInit() {
@@ -26,6 +33,8 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
         data.forEach(element => {
           this.browsers.push(element);
         });
+
+        this.browsersSlice = this.browsers.slice(this.pageNum, this.pageSize);
       }
     );
   }

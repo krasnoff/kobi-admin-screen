@@ -178,4 +178,24 @@ $screen-width: 768px;
         padding-right: 0em;
         padding-left: 0em;
     }
+
+    .panel-table {
+        .panel-body {
+            padding-right: 0.5em;
+            padding-left: 0.5em;
+            padding-bottom: 0.5em;
+            padding-top: 0.5em;
+        }
+
+        .row {
+            margin-right: 0px; 
+            margin-left: 0px;
+        }
+
+        .pagination {
+            margin-bottom: 0rem;
+        }
+    }
+
+    
 }

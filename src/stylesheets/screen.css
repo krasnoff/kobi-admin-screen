@@ -15185,3 +15185,19 @@ a.text-dark:hover, a.text-dark:focus {
     padding-left: 0em;
   }
 }
+/* line 183, ../sass/screen.scss */
+.routerFrame .panel-table .panel-body {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+/* line 190, ../sass/screen.scss */
+.routerFrame .panel-table .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+/* line 195, ../sass/screen.scss */
+.routerFrame .panel-table .pagination {
+  margin-bottom: 0rem;
+}
