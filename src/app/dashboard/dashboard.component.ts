@@ -23,7 +23,7 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     super();
 
     this.pageNum = 1;
-    this.pageSize = 5;
+    this.pageSize = 6;
   }
 
   ngOnInit() {

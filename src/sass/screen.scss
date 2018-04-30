@@ -195,6 +195,17 @@ $screen-width: 768px;
         .pagination {
             margin-bottom: 0rem;
         }
+
+        .my-pagination
+        {
+            padding-right: 0px;
+        }
+
+        .my-pagination-right
+        {
+            text-align: left;
+            padding-left: 0px;
+        }
     }
 
     

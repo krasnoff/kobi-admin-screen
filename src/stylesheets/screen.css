@@ -15201,3 +15201,12 @@ a.text-dark:hover, a.text-dark:focus {
 .routerFrame .panel-table .pagination {
   margin-bottom: 0rem;
 }
+/* line 199, ../sass/screen.scss */
+.routerFrame .panel-table .my-pagination {
+  padding-right: 0px;
+}
+/* line 204, ../sass/screen.scss */
+.routerFrame .panel-table .my-pagination-right {
+  text-align: left;
+  padding-left: 0px;
+}
