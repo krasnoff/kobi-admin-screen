@@ -34,9 +34,16 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
           this.browsers.push(element);
         });
 
-        this.browsersSlice = this.browsers.slice(this.pageNum, this.pageSize + 1);
+        this.sliceData();
       }
     );
+  }
+
+  private sliceData(): void {
+    var recordStart = (this.pageNum - 1) * this.pageSize;
+    var recordEnd = recordStart + this.pageSize;
+    
+    this.browsersSlice = this.browsers.slice(recordStart, recordEnd);
   }
 
   public getMathFloor(myNumber: number): number
@@ -49,11 +56,30 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     var numberArray = [];
 
     for (var i = 1; i <= this.getMathFloor(this.browsers.length / this.pageSize) + 1; i++)
-    {
       numberArray.push(i);
-    }
-
+    
     return numberArray;
+  }
+
+  public incrementPage(): void {
+    this.pageNum++;
+    if (this.pageNum > this.getMathFloor(this.browsers.length / this.pageSize) + 1)
+      this.pageNum = this.getMathFloor(this.browsers.length / this.pageSize) + 1
+
+    this.sliceData();
+  }
+
+  public decerementPage(): void {
+    this.pageNum--;
+    if (this.pageNum < 1)
+      this.pageNum = 1;
+
+    this.sliceData();
+  }
+
+  public setPage(pageNumber: number): void {
+    this.pageNum = pageNumber;
+    this.sliceData();
   }
 
   //#region line chart
