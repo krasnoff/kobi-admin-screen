@@ -23,7 +23,7 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     super();
 
     this.pageNum = 1;
-    this.pageSize = 6;
+    this.pageSize = 10;
   }
 
   ngOnInit() {
@@ -34,9 +34,26 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
           this.browsers.push(element);
         });
 
-        this.browsersSlice = this.browsers.slice(this.pageNum, this.pageSize);
+        this.browsersSlice = this.browsers.slice(this.pageNum, this.pageSize + 1);
       }
     );
+  }
+
+  public getMathFloor(myNumber: number): number
+  {
+    return Math.floor(myNumber);
+  }
+
+  public getPagesSequence(): Array<any>
+  {
+    var numberArray = [];
+
+    for (var i = 1; i <= this.getMathFloor(this.browsers.length / this.pageSize) + 1; i++)
+    {
+      numberArray.push(i);
+    }
+
+    return numberArray;
   }
 
   //#region line chart

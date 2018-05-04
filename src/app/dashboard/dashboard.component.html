@@ -69,15 +69,13 @@
             </table>
           </div>
           <div class="row">
-            <div class="col-sm-6 my-pagination-right" >left</div>
+            <div class="col-sm-6 my-pagination-right" >Page {{pageNum}} of {{getMathFloor(browsers.length / pageSize) + 1}}</div>
             <div class="col-sm-6 d-inline-flex mb-1 ml-auto my-pagination">
               <div class="d-inline-flex mb-1 ml-auto">
               <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-right">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item" [ngClass]="{'disabled' : pageNum == 1}"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item" *ngFor="let page of getPagesSequence(); let i = index" [ngClass]="{'active' : i == pageNum - 1}"><a class="page-link" href="#">{{page}}</a></li>
                   <li class="page-item"><a class="page-link" href="#">Next</a></li>
                 </ul>
               </nav>
