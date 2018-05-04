@@ -4,6 +4,7 @@ import {BaseClassComponent} from '../base-class/base-class.component';
 import {AppService} from '../app.service';
 
 enum DataTableColumns {
+  none = 0,
   renderingEngine = 1,
   browser = 2,
   platform = 3,
@@ -11,8 +12,17 @@ enum DataTableColumns {
   CSSGrade = 5
 }
 
+enum Direction {
+  Ascending,
+  Descending
+}
+
 class Cell {
   constructor(public type: DataTableColumns) {}
+}
+
+class ChosenDirection {
+  constructor(public type: Direction) {}
 }
 
 @Component({
@@ -32,8 +42,9 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
   private pageSize: number;
 
   // Store a reference to the enum
-  cellType = DataTableColumns;
-  public cell: Cell;
+  public chosenCell: Cell;
+  public mChosenDirection: ChosenDirection;
+      
 
   constructor(private _httpService:AppService) { 
     super();
@@ -41,7 +52,9 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     this.pageNum = 1;
     this.pageSize = 10;
 
-    this.cell = new Cell(DataTableColumns.browser)
+    this.chosenCell = new Cell(DataTableColumns.none)
+    this.mChosenDirection = new ChosenDirection(Direction.Ascending)
+    
   }
 
   ngOnInit() {
@@ -98,6 +111,16 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
   public setPage(pageNumber: number): void {
     this.pageNum = pageNumber;
     this.sliceData();
+  }
+
+  public sortByClick(chosenCell: Cell): void {
+    this.chosenCell = chosenCell;
+    /*if (this.mChosenDirection == new ChosenDirection(Direction.Ascending)) {
+      this.mChosenDirection = new ChosenDirection(Direction.Descending)
+    }
+    else {
+      this.mChosenDirection = new ChosenDirection(Direction.Ascending)
+    }*/
   }
 
   //#region line chart
