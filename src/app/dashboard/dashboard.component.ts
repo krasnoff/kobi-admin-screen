@@ -3,6 +3,18 @@ import { Component, OnInit } from '@angular/core';
 import {BaseClassComponent} from '../base-class/base-class.component';
 import {AppService} from '../app.service';
 
+enum DataTableColumns {
+  renderingEngine = 1,
+  browser = 2,
+  platform = 3,
+  engineVersion = 4,
+  CSSGrade = 5
+}
+
+class Cell {
+  constructor(public type: DataTableColumns) {}
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -19,11 +31,17 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
   private pageNum: number;
   private pageSize: number;
 
+  // Store a reference to the enum
+  cellType = DataTableColumns;
+  public cell: Cell;
+
   constructor(private _httpService:AppService) { 
     super();
 
     this.pageNum = 1;
     this.pageSize = 10;
+
+    this.cell = new Cell(DataTableColumns.browser)
   }
 
   ngOnInit() {
