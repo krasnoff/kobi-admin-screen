@@ -15191,22 +15191,29 @@ a.text-dark:hover, a.text-dark:focus {
   padding-left: 0.5em;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
+  text-align: left;
 }
-/* line 190, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .routerFrame .panel-table .row {
   margin-right: 0px;
   margin-left: 0px;
 }
-/* line 195, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .routerFrame .panel-table .pagination {
   margin-bottom: 0rem;
 }
-/* line 199, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .routerFrame .panel-table .my-pagination {
   padding-right: 0px;
 }
-/* line 204, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .routerFrame .panel-table .my-pagination-right {
   text-align: left;
   padding-left: 0px;
+}
+/* line 211, ../sass/screen.scss */
+.routerFrame .panel-table .sort-icon-position {
+  float: right;
+  padding-top: 5px;
+  color: #bbb;
 }
