@@ -50,11 +50,11 @@
             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
               <thead>
                 <tr>
-                    <th class="sorting">Rendering engine <i class="fas fa-sort sort-icon-position"></i></th>
-                    <th>Browser <i class="fas fa-sort sort-icon-position" (click)="sortByClick(null)"></i></th>
-                    <th>Platform(s) <i class="fas fa-sort sort-icon-position"></i></th>
-                    <th>Engine version <i class="fas fa-sort sort-icon-position"></i></th>
-                    <th>CSS grade <i class="fas fa-sort sort-icon-position"></i></th>
+                    <th>Rendering engine <i class="fas fa-sort sort-icon-position" (click)="sortByClick(TableColumn.renderingEngine)"></i></th>
+                    <th>Browser <i class="fas fa-sort sort-icon-position" (click)="sortByClick(TableColumn.browser)"></i></th>
+                    <th>Platform(s) <i class="fas fa-sort sort-icon-position" (click)="sortByClick(TableColumn.platform)"></i></th>
+                    <th>Engine version <i class="fas fa-sort sort-icon-position" (click)="sortByClick(TableColumn.engineVersion)"></i></th>
+                    <th>CSS grade <i class="fas fa-sort sort-icon-position" (click)="sortByClick(TableColumn.CSSGrade)"></i></th>
                 </tr>
               </thead>
               <tbody>

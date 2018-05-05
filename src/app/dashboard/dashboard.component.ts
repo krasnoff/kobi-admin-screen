@@ -1,29 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TableColumn } from '../table-column.enum';
+import { TableColumnAware } from '../table-column-aware.decorator';
+import { SortDirection } from '../sort-direction.enum';
+import { SortDirectionAware } from '../sort-direction-aware.decorator';
+
 import {BaseClassComponent} from '../base-class/base-class.component';
 import {AppService} from '../app.service';
-
-enum DataTableColumns {
-  none = 0,
-  renderingEngine = 1,
-  browser = 2,
-  platform = 3,
-  engineVersion = 4,
-  CSSGrade = 5
-}
-
-enum Direction {
-  Ascending,
-  Descending
-}
-
-class Cell {
-  constructor(public type: DataTableColumns) {}
-}
-
-class ChosenDirection {
-  constructor(public type: Direction) {}
-}
 
 @Component({
   selector: 'app-dashboard',
@@ -34,6 +17,8 @@ class ChosenDirection {
   },
   providers: [AppService]
 })
+@TableColumnAware
+@SortDirectionAware
 export class DashboardComponent extends BaseClassComponent implements OnInit {
   public browsers: Array<any> = [];
   public browsersSlice: Array<any> = [];
@@ -42,8 +27,8 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
   private pageSize: number;
 
   // Store a reference to the enum
-  public chosenCell: Cell;
-  public mChosenDirection: ChosenDirection;
+  public tableColumnValue: TableColumn = TableColumn.none;
+  public sortDirectionValue: SortDirection = SortDirection.Ascending;
       
 
   constructor(private _httpService:AppService) { 
@@ -52,9 +37,6 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     this.pageNum = 1;
     this.pageSize = 10;
 
-    this.chosenCell = new Cell(DataTableColumns.none)
-    this.mChosenDirection = new ChosenDirection(Direction.Ascending)
-    
   }
 
   ngOnInit() {
@@ -113,14 +95,12 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     this.sliceData();
   }
 
-  public sortByClick(chosenCell: Cell): void {
-    this.chosenCell = chosenCell;
-    /*if (this.mChosenDirection == new ChosenDirection(Direction.Ascending)) {
-      this.mChosenDirection = new ChosenDirection(Direction.Descending)
+  public sortByClick(tableColumnValue: TableColumn): void {
+    if (this.tableColumnValue == tableColumnValue) {
+      this.sortDirectionValue = this.sortDirectionValue == SortDirection.Ascending ? SortDirection.Descending : SortDirection.Ascending
     }
-    else {
-      this.mChosenDirection = new ChosenDirection(Direction.Ascending)
-    }*/
+    
+    this.tableColumnValue = tableColumnValue;
   }
 
   //#region line chart
