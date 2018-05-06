@@ -52,6 +52,33 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     );
   }
 
+  private sortData(columnName, direction): void {
+    if (this.browsers.length > 0)
+    {
+      var propertyList = Object.getOwnPropertyNames(this.browsers[0])
+      var chosenPropery = propertyList[columnName - 1];
+      
+      if (direction == SortDirection.Ascending)
+      {
+        this.browsers.sort(function(a, b) {
+          if (a[chosenPropery] > b[chosenPropery]) { return 1; }
+          if (a[chosenPropery] < b[chosenPropery]) { return -1; }
+          return 0;
+        });
+      }
+      else{
+        this.browsers.sort(function(a, b) {
+          if (a[chosenPropery] > b[chosenPropery]) { return -1; }
+          if (a[chosenPropery] < b[chosenPropery]) { return 1; }
+          return 0;
+        });
+      }
+
+      this.pageNum = 1;
+      this.sliceData();
+    }
+  }
+
   private sliceData(): void {
     var recordStart = (this.pageNum - 1) * this.pageSize;
     var recordEnd = recordStart + this.pageSize;
@@ -101,6 +128,8 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     }
     
     this.tableColumnValue = tableColumnValue;
+
+    this.sortData(tableColumnValue, this.sortDirectionValue);
   }
 
   //#region line chart
