@@ -31,7 +31,7 @@
         </a>
         <div class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-user">
             <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-user"></i> User Profile</a>
-            <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-cog"></i> Settings</a>
+            <a class="dropdown-item" [routerLink]="['/']" (click)="open(content)"><i class="fas fa-cog"></i> Settings</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
@@ -75,3 +75,22 @@
     
   </div>
 </div>
+
+<!-- modal dialog box-->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Choose language</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <ul class="list-group">
+            <li class="list-group-item active">English</li>
+            <li class="list-group-item">French</li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+  </ng-template>

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {AppService} from './app.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {TranslateService} from '@ngx-translate/core';
+import { GlobalDataService } from './global-data.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +16,9 @@ export class AppComponent {
   public samplePageClicked: boolean = false;
   public displaySideMenu: boolean = false;
 
-  constructor(private _httpService:AppService) {}
+  public closeResult: string;
+
+  constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService) {}
 
   ngOnInit() {
     this._httpService.getMethod('/json/mailList.json')
@@ -24,6 +29,24 @@ export class AppComponent {
         });
       }
     );
+  }
+
+  open(content) {
+    this.modalService.open(content).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
 
   onSamplePageClicked(event, item){

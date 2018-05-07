@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 import { TableColumn } from '../table-column.enum';
 import { TableColumnAware } from '../table-column-aware.decorator';
 import { SortDirection } from '../sort-direction.enum';
@@ -29,6 +30,8 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
   // Store a reference to the enum
   public tableColumnValue: TableColumn = TableColumn.none;
   public sortDirectionValue: SortDirection = SortDirection.Ascending;
+
+  
       
 
   constructor(private _httpService:AppService) { 
@@ -52,6 +55,10 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
     );
   }
 
+  
+
+  //#region table manipulation
+  
   private sortData(columnName, direction): void {
     if (this.browsers.length > 0)
     {
@@ -131,6 +138,8 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
 
     this.sortData(tableColumnValue, this.sortDirectionValue);
   }
+
+  //#endregion
 
   //#region line chart
   
