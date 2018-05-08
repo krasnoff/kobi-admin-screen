@@ -23,9 +23,9 @@ export class AppComponent {
   public closeResult: string;
 
   constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService, public gd: GlobalDataService) {
-    if (this.gd.shareObj['selectedLang'] == undefined)
-      this.gd.shareObj['selectedLang'] = Languages.English;
-    translate.setDefaultLang(this.gd.shareObj['selectedLang']);
+    if (this.translate.currentLang == undefined)
+      this.translate.currentLang = Languages.English;
+    translate.setDefaultLang(this.translate.currentLang);
   }
 
   ngOnInit() {
@@ -40,8 +40,7 @@ export class AppComponent {
   }
 
   useLanguage(language: string) {
-    this.translate.use(language);  
-    this.gd.shareObj['selectedLang'] = language;
+    this.translate.use(language); 
     this.gd.changeLanguage(language);  
   }
 

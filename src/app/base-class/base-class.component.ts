@@ -13,16 +13,16 @@ import { Languages } from '../languages.enum';
 export class BaseClassComponent implements OnInit {
 
   constructor(protected gd: GlobalDataService, protected translate: TranslateService) { 
-    if (this.gd.shareObj['selectedLang'] == undefined)
-      this.gd.shareObj['selectedLang'] = Languages.English;
-    translate.setDefaultLang(this.gd.shareObj['selectedLang']);
+    if (this.translate.currentLang == undefined)
+      this.translate.currentLang = Languages.English;
+    translate.setDefaultLang(this.translate.currentLang);
 
     gd.changeLanguage$.subscribe(lang => this.onLangChange(lang))
   }
 
   onLangChange(lang: string) {
     console.log('from inner component: ' + lang);
-    this.translate.setDefaultLang(this.gd.shareObj['selectedLang']);
+    this.translate.setDefaultLang(this.translate.currentLang);
   }
 
   ngOnInit() {
