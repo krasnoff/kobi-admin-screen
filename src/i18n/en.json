@@ -9,5 +9,8 @@
       "PAGE1-WORKS": "Page 1 works!",
       "PAGE2-WORKS": "Page 2 works!",
       "ADMIN-WORKS": "Admin works!"
+    },
+    "DASHBOARD" : {
+      "TITLE": "Dashboard"
     }
 }

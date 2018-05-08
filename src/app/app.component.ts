@@ -4,12 +4,16 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateService} from '@ngx-translate/core';
 import { GlobalDataService } from './global-data.service';
 
+import { LanguagesAware } from './languages-aware.decorator';
+import { Languages } from './languages.enum';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [AppService]
 })
+@LanguagesAware
 export class AppComponent {
   public codes: Array<any> = [];
   public numOfMails: number = 3;
@@ -18,9 +22,9 @@ export class AppComponent {
 
   public closeResult: string;
 
-  constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService, private gd: GlobalDataService) {
+  constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService, public gd: GlobalDataService) {
     if (this.gd.shareObj['selectedLang'] == undefined)
-      this.gd.shareObj['selectedLang'] = 'en'
+      this.gd.shareObj['selectedLang'] = Languages.English;
     translate.setDefaultLang(this.gd.shareObj['selectedLang']);
   }
 
@@ -37,6 +41,7 @@ export class AppComponent {
 
   useLanguage(language: string) {
     this.translate.use(language);  
+    this.gd.shareObj['selectedLang'] = language;
     this.gd.changeLanguage(language);  
   }
 
