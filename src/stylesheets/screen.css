@@ -15033,41 +15033,46 @@ a.text-dark:hover, a.text-dark:focus {
     }
 }*/
 /* line 35, ../sass/screen.scss */
+.list-group-item, .dropdown-item {
+  cursor: pointer;
+}
+
+/* line 40, ../sass/screen.scss */
 #wrapper {
   width: 100%;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 45, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .navbar-header {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .navbar-default {
   background-color: #f8f8f8;
   border-bottom: 1px solid #e7e7e7;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
-  /* line 57, ../sass/screen.scss */
+  /* line 62, ../sass/screen.scss */
   .navbar-static-top {
     border-radius: 0;
   }
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .admin-dropdown-toggle {
   padding-left: 1.5em;
   text-decoration: none;
@@ -15075,40 +15080,40 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 18px;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .admin-dropdown-user {
   font-size: 0.9em;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .admin-dropdown-user-mail {
   width: 290px;
   font-size: 0.9em;
 }
-/* line 84, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 .admin-dropdown-user-mail .mail-text {
   white-space: normal;
 }
-/* line 89, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .admin-dropdown-user-mail .from {
   font-weight: 700;
   width: 49%;
   float: left;
 }
-/* line 96, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .admin-dropdown-user-mail .date {
   font-style: italic;
   width: 49%;
   float: right;
   text-align: right;
 }
-/* line 104, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .admin-dropdown-user-mail .readAllItems {
   font-weight: 700;
   text-align: center;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .sidebar {
   border-right: 1px solid #e7e7e7;
   width: 350px;
@@ -15116,61 +15121,61 @@ a.text-dark:hover, a.text-dark:focus {
   padding-left: 0px;
   padding-right: 0px;
 }
-/* line 118, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .sidebar .nav-item {
   border-bottom: 1px solid #e7e7e7;
 }
-/* line 123, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .sidebar .sub-item {
   padding-left: 23px;
   display: none;
 }
-/* line 128, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .sidebar .active {
   display: block;
 }
 @media (max-width: 768px) {
-  /* line 111, ../sass/screen.scss */
+  /* line 116, ../sass/screen.scss */
   .sidebar {
     height: auto;
   }
 }
 
 @media (max-width: 768px) {
-  /* line 137, ../sass/screen.scss */
+  /* line 142, ../sass/screen.scss */
   .navbar-right {
     width: 100%;
   }
-  /* line 142, ../sass/screen.scss */
+  /* line 147, ../sass/screen.scss */
   .navbar-right .dropdown-menu {
     left: 0px !important;
   }
 }
 
 @media (max-width: 768px) {
-  /* line 149, ../sass/screen.scss */
+  /* line 154, ../sass/screen.scss */
   .navbar-toggle {
     float: right;
   }
 }
 @media (min-width: 768px) {
-  /* line 149, ../sass/screen.scss */
+  /* line 154, ../sass/screen.scss */
   .navbar-toggle {
     display: none;
   }
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 .routerFrame {
   width: calc(100% - 350px);
   padding-right: 1.0em;
   padding-left: 1.0em;
 }
-/* line 166, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .routerFrame .myDashboard {
   text-align: center;
 }
-/* line 169, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .routerFrame .myDashboard .panel {
   margin-bottom: 20px;
   background-color: #fff;
@@ -15179,7 +15184,7 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-/* line 177, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .routerFrame .myDashboard .panel .panel-heading {
   color: #333;
   background-color: #f5f5f5;
@@ -15190,14 +15195,14 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: left;
 }
 @media (max-width: 768px) {
-  /* line 160, ../sass/screen.scss */
+  /* line 165, ../sass/screen.scss */
   .routerFrame {
     width: 100%;
     padding-right: 0em;
     padding-left: 0em;
   }
 }
-/* line 196, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .routerFrame .panel-table .panel-body {
   padding-right: 0.5em;
   padding-left: 0.5em;
@@ -15205,31 +15210,31 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top: 0.5em;
   text-align: left;
 }
-/* line 204, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 .routerFrame .panel-table .row {
   margin-right: 0px;
   margin-left: 0px;
 }
-/* line 209, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .routerFrame .panel-table .pagination {
   margin-bottom: 0rem;
 }
-/* line 213, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .routerFrame .panel-table .my-pagination {
   padding-right: 0px;
 }
-/* line 218, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .routerFrame .panel-table .my-pagination-right {
   text-align: left;
   padding-left: 0px;
 }
-/* line 224, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .routerFrame .panel-table .sort-icon-position {
   float: right;
   padding-top: 5px;
   color: #bbb;
 }
-/* line 231, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 .routerFrame .panel-table td {
   width: 20%;
 }

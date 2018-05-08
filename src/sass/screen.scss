@@ -32,6 +32,11 @@ $screen-width: 768px;
     }
 }*/
 
+.list-group-item, .dropdown-item
+{
+    cursor: pointer;
+}
+
 #wrapper
 {
     width: 100%;

@@ -31,7 +31,7 @@
         </a>
         <div class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-user">
             <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-user"></i> User Profile</a>
-            <a class="dropdown-item" [routerLink]="['/']" (click)="open(content)"><i class="fas fa-cog"></i> Settings</a>
+            <span class="dropdown-item" (click)="open(content)"><i class="fas fa-cog"></i> Settings</span>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
@@ -86,8 +86,8 @@
     </div>
     <div class="modal-body">
         <ul class="list-group">
-            <li class="list-group-item" (click)="useLanguage(Languages.English)" [ngClass]="{'active': gd.shareObj['selectedLang'] == 'en'}">English</li>
-            <li class="list-group-item" (click)="useLanguage(Languages.French)" [ngClass]="{'active': gd.shareObj['selectedLang'] == 'fr'}">French</li>
+            <li class="list-group-item" (click)="useLanguage(Languages.English)" [ngClass]="{'active': gd.shareObj['selectedLang'] == Languages.English}">English</li>
+            <li class="list-group-item" (click)="useLanguage(Languages.French)" [ngClass]="{'active': gd.shareObj['selectedLang'] == Languages.French}">French</li>
         </ul>
     </div>
     <div class="modal-footer">
