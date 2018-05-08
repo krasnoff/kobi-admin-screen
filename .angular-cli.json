@@ -12,7 +12,8 @@
         "favicon.ico",
         "stylesheets",
         "webfonts",
-        "json"
+        "json",
+        "i18n"
       ],
       "index": "index.html",
       "main": "main.ts",

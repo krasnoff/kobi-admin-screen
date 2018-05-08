@@ -18,7 +18,11 @@ export class AppComponent {
 
   public closeResult: string;
 
-  constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService) {}
+  constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService, private gd: GlobalDataService) {
+    if (this.gd.shareObj['selectedLang'] == undefined)
+      this.gd.shareObj['selectedLang'] = 'en'
+    translate.setDefaultLang(this.gd.shareObj['selectedLang']);
+  }
 
   ngOnInit() {
     this._httpService.getMethod('/json/mailList.json')
@@ -29,6 +33,11 @@ export class AppComponent {
         });
       }
     );
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);  
+    this.gd.changeLanguage(language);  
   }
 
   open(content) {

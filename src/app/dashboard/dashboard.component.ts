@@ -9,6 +9,9 @@ import { SortDirectionAware } from '../sort-direction-aware.decorator';
 import {BaseClassComponent} from '../base-class/base-class.component';
 import {AppService} from '../app.service';
 
+import { GlobalDataService } from '../global-data.service';
+import {TranslateService} from '@ngx-translate/core';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -34,8 +37,8 @@ export class DashboardComponent extends BaseClassComponent implements OnInit {
   
       
 
-  constructor(private _httpService:AppService) { 
-    super();
+  constructor(private _httpService:AppService, protected gd: GlobalDataService, protected translate: TranslateService) { 
+    super(gd, translate);
 
     this.pageNum = 1;
     this.pageSize = 10;

@@ -16,6 +16,7 @@ import { BaseClassComponent } from './base-class/base-class.component';
 
 import { GlobalDataService } from './global-data.service';
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent }

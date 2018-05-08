@@ -19,6 +19,19 @@ $background-color: #f8f8f8;
 $border: 1px solid #e7e7e7;
 $screen-width: 768px;
 
+/*.modal {
+    &.show .modal-dialog {
+        transition: 0.25s all;
+        opacity: 0;
+        transform: translate(0, 5vh);
+    }
+
+    &.custom-show .modal-dialog {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}*/
+
 #wrapper
 {
     width: 100%;
