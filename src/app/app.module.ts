@@ -15,11 +15,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BaseClassComponent } from './base-class/base-class.component';
 
 import { GlobalDataService } from './global-data.service';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+
+  { path: 'login/:redirectTo', component: LoginPageComponent }
 ];
 
 // AoT requires an exported function for factories
@@ -31,7 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     DashboardComponent,
-    BaseClassComponent
+    BaseClassComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
