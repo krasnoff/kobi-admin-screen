@@ -34,6 +34,7 @@ export class AppComponent {
         if (event.url.indexOf("/login") > -1) {
           document.getElementById("topNav").style.display = "none";
           document.getElementById("sidebar").style.display = "none";
+          
         }
         else {
           document.getElementById("topNav").style.display = "flex";

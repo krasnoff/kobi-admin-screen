@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ChartsModule } from 'ng2-charts';
@@ -51,7 +52,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
       
-    })
+    }),
+    FormsModule 
   ],
   providers: [GlobalDataService],
   bootstrap: [AppComponent]

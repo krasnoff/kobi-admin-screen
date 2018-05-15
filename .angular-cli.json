@@ -13,7 +13,8 @@
         "stylesheets",
         "webfonts",
         "json",
-        "i18n"
+        "i18n",
+        "images"
       ],
       "index": "index.html",
       "main": "main.ts",
