@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="wrapper">
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topNav">
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">Kobi Admin Screen</a>
     </div>
@@ -42,7 +42,7 @@
       <div class="row">
           <nav class="col-md-2 d-md-block bg-light sidebar" [ngClass]="{'d-none': displaySideMenu}">
               <div class="sidebar-sticky">
-                  <ul class="nav flex-column">
+                  <ul class="nav flex-column" id="sidebar">
                       <li class="nav-item">
                         <a class="nav-link"  [routerLink]="['/dashboard']">
                             <i class="fas fa-tachometer-alt"></i>&nbsp;&nbsp;Dashboard
