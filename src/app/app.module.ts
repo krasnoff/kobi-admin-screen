@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AuthenticatedGuard } from './authenticated.guard';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ChartsModule } from 'ng2-charts';
@@ -18,10 +20,11 @@ import { BaseClassComponent } from './base-class/base-class.component';
 import { GlobalDataService } from './global-data.service';
 import { LoginPageComponent } from './login-page/login-page.component';
 
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthenticatedGuard] },
 
   { path: 'login/:redirectTo', component: LoginPageComponent }
 ];
@@ -51,11 +54,12 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-      
     }),
-    FormsModule 
+    FormsModule,
+    ToastModule.forRoot(),
+    BrowserAnimationsModule
   ],
-  providers: [GlobalDataService],
+  providers: [GlobalDataService, AuthenticatedGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

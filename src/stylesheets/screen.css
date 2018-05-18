@@ -15238,3 +15238,10 @@ a.text-dark:hover, a.text-dark:focus {
 .routerFrame .panel-table td {
   width: 20%;
 }
+
+/* line 244, ../sass/screen.scss */
+.toast-top-right {
+  bottom: 12px !important;
+  right: 12px !important;
+  top: auto !important;
+}

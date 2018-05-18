@@ -24,7 +24,7 @@ export class AppComponent {
 
   public closeResult: string;
 
-  constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService, public gd: GlobalDataService, router:Router) {
+  constructor(private _httpService:AppService, private modalService: NgbModal, private translate: TranslateService, public gd: GlobalDataService, private router:Router) {
     if (this.translate.currentLang == undefined)
       this.translate.currentLang = Languages.English;
     translate.setDefaultLang(this.translate.currentLang);
@@ -57,6 +57,12 @@ export class AppComponent {
         });
       }
     );
+  }
+
+  logout() {
+    localStorage.removeItem('isLogin');
+    this.gd["isLogin"] = false;
+    this.router.navigate(["/login/dashboard"]);
   }
 
   useLanguage(language: string) {
