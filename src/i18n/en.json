@@ -12,5 +12,8 @@
     },
     "DASHBOARD" : {
       "TITLE": "Dashboard"
+    },
+    "BLANK" : {
+      "TITLE": "Blank Page"
     }
 }

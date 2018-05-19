@@ -15245,3 +15245,10 @@ a.text-dark:hover, a.text-dark:focus {
   right: 12px !important;
   top: auto !important;
 }
+
+/* line 250, ../sass/screen.scss */
+a:not([href]):not([tabindex]) {
+  text-decoration: none;
+  cursor: pointer;
+  color: #007bff;
+}

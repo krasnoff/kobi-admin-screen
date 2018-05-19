@@ -246,3 +246,9 @@ $screen-width: 768px;
     right:12px !important;
     top: auto !important;
 }
+
+a:not([href]):not([tabindex]) {
+    text-decoration: none;
+    cursor: pointer;
+    color: #007bff;
+}

@@ -21,10 +21,12 @@ import { GlobalDataService } from './global-data.service';
 import { LoginPageComponent } from './login-page/login-page.component';
 
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
+//import { BlankComponent } from './blank/blank.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthenticatedGuard] },
+  { path: 'blank', loadChildren: './blank/blank.module#BlankModule' },
 
   { path: 'login/:redirectTo', component: LoginPageComponent }
 ];
@@ -39,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     DashboardComponent,
     BaseClassComponent,
-    LoginPageComponent
+    LoginPageComponent//,
+    //BlankComponent
   ],
   imports: [
     BrowserModule,

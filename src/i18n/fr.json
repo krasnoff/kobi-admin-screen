@@ -13,4 +13,8 @@
   "DASHBOARD" : {
       "TITLE": "Tableau de bord"
   }
+  ,
+  "BLANK" : {
+      "TITLE": "Page Blanche"
+  }
 }
