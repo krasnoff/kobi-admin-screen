@@ -10,9 +10,9 @@
 
     <ul class="nav navbar-top-links navbar-right" >
       <li class="dropdown" ngbDropdown placement="bottom-right">
-        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-envelope" [routerLink]="['/dashboard']" style="text-decoration: none;" ngbDropdownToggle>
+        <span class="dropdown-toggle admin-dropdown-toggle user-clickable" id="drp-envelope" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-envelope fa-fw"></i>
-        </a>
+        </span>
         <div class="dropdown-menu dropdown-user admin-dropdown-user-mail" ngbDropdownMenu aria-labelledby="drp-envelope">
             <div *ngFor="let code of codes; let i=index">
                 <div class="dropdown-item" *ngIf="i<numOfMails">
@@ -26,14 +26,14 @@
         </div>
       </li>
       <li class="dropdown" ngbDropdown placement="bottom-right">
-        <a class="dropdown-toggle admin-dropdown-toggle" id="drp-user" [routerLink]="['/dashboard']" style="text-decoration: none;" ngbDropdownToggle>
+        <span class="dropdown-toggle admin-dropdown-toggle user-clickable" id="drp-user" style="text-decoration: none;" ngbDropdownToggle>
           <i class="fa fa-user fa-fw"></i>
-        </a>
+        </span>
         <div class="dropdown-menu dropdown-user admin-dropdown-user" ngbDropdownMenu aria-labelledby="drp-user">
-            <a class="dropdown-item"  [routerLink]="['/dashboard']"><i class="fas fa-user"></i> User Profile</a>
+            <span class="dropdown-item"><i class="fas fa-user"></i> User Profile</span>
             <span class="dropdown-item" (click)="open(content)"><i class="fas fa-cog"></i> Settings</span>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <span class="dropdown-item" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Logout</span>
         </div>
       </li>
     </ul>
@@ -54,9 +54,9 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" (click)="onSamplePageClicked($event, item)">
+                        <span class="nav-link user-clickable" (click)="onSamplePageClicked($event, item)">
                             <i class="far fa-copy"></i>&nbsp;&nbsp;Sample Pages
-                        </a>
+                        </span>
                         <ul class="nav flex-column">
                             <li class="nav-item sub-item" [ngClass]="{'active': samplePageClicked}">
                                 <a class="nav-link"  [routerLink]="['/blank']">Blank Page</a>

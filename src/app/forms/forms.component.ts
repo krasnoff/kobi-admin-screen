@@ -12,6 +12,7 @@ import {TranslateService} from '@ngx-translate/core';
   host: {
     class:'routerFrame'
   }
+  
 })
 export class FormsComponent extends BaseClassComponent implements OnInit {
 

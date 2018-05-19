@@ -15252,3 +15252,13 @@ a:not([href]):not([tabindex]) {
   cursor: pointer;
   color: #007bff;
 }
+
+/* line 256, ../sass/screen.scss */
+.user-clickable {
+  cursor: pointer;
+  color: #007bff;
+}
+/* line 260, ../sass/screen.scss */
+.user-clickable:hover {
+  color: #005683;
+}
