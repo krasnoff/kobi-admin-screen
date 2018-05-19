@@ -7,7 +7,33 @@
   <div class="col-sm-12">
     <div class="panel panel-default">
       <div class="panel-heading"><i class="fab fa-wpforms"></i>&nbsp;Forms Example</div>
-      <div class="panel-body">fdsgsdf</div>
+      <div class="panel-body">
+        <div class="col-sm-6 forms">
+          <div class="form-group">
+            <label for="exampleInputEmail1">First Name</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="txtFirstName">
+            <small id="txtFirstName" class="valid-feedback">Please fill first name</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Last Name</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="txtLastName">
+            <small id="txtLastName" class="valid-feedback">Please fill last name</small>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              
+              
+              <input class="form-control" placeholder="yyyy-mm-dd" id="txtBirthDate" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
+                  <img src="images/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6"></div>
+      </div>
     </div>
   </div>
 </div>

@@ -15262,3 +15262,12 @@ a:not([href]):not([tabindex]) {
 .user-clickable:hover {
   color: #005683;
 }
+
+/* line 265, ../sass/screen.scss */
+.forms {
+  text-align: left;
+}
+/* line 268, ../sass/screen.scss */
+.forms .form-group {
+  margin-top: 1.0em;
+}

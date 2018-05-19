@@ -261,3 +261,11 @@ a:not([href]):not([tabindex]) {
         color: #005683;
     }
 }
+
+.forms {
+    text-align: left;
+
+    .form-group {
+        margin-top: 1.0em;
+    }
+}
