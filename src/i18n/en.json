@@ -15,5 +15,8 @@
     },
     "BLANK" : {
       "TITLE": "Blank Page"
+    },
+    "FORMS" : {
+      "TITLE": "Form Page"
     }
 }

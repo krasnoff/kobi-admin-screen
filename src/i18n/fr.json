@@ -16,5 +16,8 @@
   ,
   "BLANK" : {
       "TITLE": "Page Blanche"
+  },
+  "FORMS" : {
+    "TITLE": "Page de Formulaire"
   }
 }
