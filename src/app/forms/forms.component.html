@@ -11,23 +11,34 @@
         <div class="col-sm-6 forms">
           <div class="form-group">
             <label for="exampleInputEmail1">First Name</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="txtFirstName">
-            <small id="txtFirstName" class="valid-feedback">Please fill first name</small>
+            <input type="text" class="form-control" id="txtFirstName" aria-describedby="txtFirstName" [(ngModel)]="txtFirstName"  [ngClass]="{'invalid': isSubmited && !isnullOrEmpty(txtFirstName)}">
+            <div class="invalid-feedback" [ngClass]="{'invalid': isSubmited && !isnullOrEmpty(txtFirstName)}">Please fill first name</div>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Last Name</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="txtLastName">
-            <small id="txtLastName" class="valid-feedback">Please fill last name</small>
+            <input type="email" class="form-control" id="txtLastName" aria-describedby="txtLastName" [(ngModel)]="txtLastName" [ngClass]="{'invalid': isSubmited && !isnullOrEmpty(txtLastName)}">
+            <div class="invalid-feedback" [ngClass]="{'invalid': isSubmited && !isnullOrEmpty(txtLastName)}">Please fill last name</div>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Choose Date</label>
             <div class="input-group">
-              <input class="form-control" placeholder="yyyy-mm-dd" id="txtBirthDate" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+              <input class="form-control" placeholder="yyyy-mm-dd" id="txtBirthDate" name="dp" [(ngModel)]="txtBirthDate" ngbDatepicker #d="ngbDatepicker" [ngClass]="{'invalid': isSubmited && !isnullOrEmpty(txtBirthDate)}">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button">
                   <img src="images/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
                 </button>
               </div>
+            </div>
+            <div class="invalid-feedback" [ngClass]="{'invalid': isSubmited && !isnullOrEmpty(txtBirthDate)}">Please choose date</div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">ID Number</label>
+            <input type="email" class="form-control" id="txtIDNum" aria-describedby="txtIDNum" [(ngModel)]="txtIDNum" maxlength="9" appInputNumbersOnly>
+            <div class="invalid-feedback"  [ngClass]="{'invalid': isSubmited && ValidateID(txtIDNum) != R_VALID}">wrong id number</div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <button type="button" class="btn btn-primary" (click)="onsubmit()">Submit!</button>
             </div>
           </div>
         </div>

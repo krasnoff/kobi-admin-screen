@@ -269,3 +269,14 @@ a:not([href]):not([tabindex]) {
         margin-top: 1.0em;
     }
 }
+
+.invalid-feedback {
+    display: block;
+    visibility: hidden;
+
+    
+}
+
+.invalid {
+    visibility: visible;
+}

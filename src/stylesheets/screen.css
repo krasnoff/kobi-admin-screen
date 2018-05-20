@@ -15271,3 +15271,14 @@ a:not([href]):not([tabindex]) {
 .forms .form-group {
   margin-top: 1.0em;
 }
+
+/* line 273, ../sass/screen.scss */
+.invalid-feedback {
+  display: block;
+  visibility: hidden;
+}
+
+/* line 280, ../sass/screen.scss */
+.invalid {
+  visibility: visible;
+}

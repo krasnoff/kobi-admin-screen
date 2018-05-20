@@ -22,6 +22,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import { FormsComponent } from './forms/forms.component';
+import { InputNumbersOnlyDirective } from './input-numbers-only.directive';
 //import { BlankComponent } from './blank/blank.component';
 
 const routes: Routes = [
@@ -44,8 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     DashboardComponent,
     BaseClassComponent,
     LoginPageComponent,
-    FormsComponent//,
-    //BlankComponent
+    FormsComponent,
+    InputNumbersOnlyDirective
   ],
   imports: [
     BrowserModule,
