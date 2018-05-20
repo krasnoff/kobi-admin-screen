@@ -24,11 +24,18 @@ import {TranslateService} from '@ngx-translate/core';
 @TableColumnAware
 @SortDirectionAware
 export class DashboardComponent extends BaseClassComponent implements OnInit {
+  public TableColumn;
+  public renderingEngine;
+  public SortDirection;
+  public browser;
+  public chartHovered;
+  public chartClicked;
+
   public browsers: Array<any> = [];
   public browsersSlice: Array<any> = [];
 
-  private pageNum: number;
-  private pageSize: number;
+  public pageNum: number;
+  public pageSize: number;
 
   // Store a reference to the enum
   public tableColumnValue: TableColumn = TableColumn.none;

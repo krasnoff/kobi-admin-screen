@@ -17,6 +17,8 @@ import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCanc
 })
 @LanguagesAware
 export class AppComponent {
+  public item;
+
   public codes: Array<any> = [];
   public numOfMails: number = 3;
   public samplePageClicked: boolean = false;

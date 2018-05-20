@@ -40,8 +40,8 @@ export class FormsComponent extends BaseClassComponent implements OnInit {
   onsubmit() {
     if (!this.isnullOrEmpty(this.txtFirstName) ||
         !this.isnullOrEmpty(this.txtLastName) ||
-        !this.isnullOrEmpty(this.txtBirthDate) ||
-        this.ValidateID(Number(this.txtIDNum)) != this.R_VALID) {
+        this.txtBirthDate == undefined ||
+        this.ValidateID(this.txtIDNum) != this.R_VALID) {
       this.isSubmited = true;
     }
     else {
@@ -60,17 +60,17 @@ export class FormsComponent extends BaseClassComponent implements OnInit {
     } 
   }
 
-  ValidateID(str: number): number {
+  ValidateID(str: string): number {
     //INPUT VALIDATION
 
     // Just in case -> convert to string
     var IDnum = String(str);
 
     // Validate correct input
-    if ((IDnum.length > 9) || (IDnum.length < 5))
+    /*if ((IDnum.length > 9) || (IDnum.length < 5))
       return this.R_ELEGAL_INPUT; 
     if (Number.isNaN(str))
-      return this.R_ELEGAL_INPUT;
+      return this.R_ELEGAL_INPUT;*/
 
    // The number is too short - add leading 0000
     if (IDnum.length < 9)
